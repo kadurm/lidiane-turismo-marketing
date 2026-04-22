@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer Cana Brava V2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .story-container { background-image: url('bg_cana_brava_v2.png'); }
+        .destination-badge { background: #FF7F50; color: white; }
+        .price-box { background: rgba(255, 255, 255, 0.95); border: none; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .price-value { color: #008080; }
+        .info-card { background: rgba(255, 255, 255, 0.95); color: #333; }
+        .info-title { color: #666; }
+        .info-desc { color: #333; }
+        .include-text { color: #444; }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <div class="header">
+            <div class="logo-container" style="background: rgba(255,255,255,0.8);">
+                <img src="../brand/logo.png" alt="Lidiane Turismo">
+            </div>
+            <div class="destination-badge">CANA BRAVA - ILHÉUS/BA</div>
+        </div>
+
+        <div class="content">
+            <div class="price-box">
+                <div class="price-label">A PARTIR DE</div>
+                <div class="price-value">R$ [PREÇO]</div>
+                <div class="price-suffix">por pessoa (pacote completo)</div>
+            </div>
+
+            <div class="info-card">
+                <div class="info-row">
+                    <div class="icon">🛫</div>
+                    <div class="info-text">
+                        <div class="info-title">Saída</div>
+                        <div class="info-desc">[DATA DE SAÍDA]</div>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <div class="icon">🛬</div>
+                    <div class="info-text">
+                        <div class="info-title">Retorno</div>
+                        <div class="info-desc">[DATA DE RETORNO]</div>
+                    </div>
+                </div>
+                <div class="package-includes" style="background: rgba(0,128,128,0.1);">
+                    <div class="icon">🚌</div>
+                    <div class="include-text">Pacote inclui: [TIPO DE TRANSPORTE]<br>+ Hospedagem no Resort All-inclusive</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
