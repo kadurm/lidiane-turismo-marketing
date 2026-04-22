@@ -4,47 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cana Brava Resort - Lidiane Turismo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .hero { background-image: url('bg_cana_brava_v1.png'); }
+    </style>
 </head>
-<body class="destination-page">
+<body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="logo">
-            <img src="../brand/logo.png" alt="Lidiane Turismo">
+        <div class="container nav-content">
+            <div class="logo">
+                <img src="../brand/logo.png" alt="Lidiane Turismo Logo" class="logo-img">
+                <span class="logo-text">Lidiane Turismo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Menu Principal</a></li>
+                <li><a href="#flyers">Flyers (Campanha)</a></li>
+            </ul>
+            <a href="../index.html" class="btn btn-secondary">Voltar</a>
         </div>
-        <a href="../index.html" class="nav-link">Voltar ao Menu Principal</a>
     </nav>
 
-    <header class="hero" style="background-image: url('bg_cana_brava_v1.png');">
+    <!-- Hero Section -->
+    <header class="hero" id="home">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="destination-tag">Ilhéus - BA</div>
-            <h1 class="destination-title">Cana Brava Resort</h1>
-            <p class="destination-subtitle">Paraíso Tropical com All-Inclusive Premium</p>
-            <a href="#flyers" class="btn btn-primary">Ver Campanhas (Flyers)</a>
+        <div class="container hero-content">
+            <span class="badge fade-in-up">Ilhéus - BA</span>
+            <h1 class="hero-title fade-in-up delay-1">Descubra o Paraíso no <br><span class="highlight">Cana Brava Resort</span></h1>
+            <p class="hero-subtitle fade-in-up delay-2">Natureza tropical exuberante, chalés rústicos na beira-mar e um novíssimo complexo minimalista com All-inclusive premium.</p>
+            <div class="hero-actions fade-in-up delay-3">
+                <a href="#flyers" class="btn btn-primary btn-large">Ver Artes da Campanha</a>
+            </div>
+        </div>
+
+        <!-- Glassmorphism Stats Card -->
+        <div class="hero-stats glass-card fade-in-up delay-4">
+            <div class="stat">
+                <i class="ph ph-tree-palm"></i>
+                <div class="stat-text">
+                    <strong>70.000m²</strong>
+                    <span>De pura natureza</span>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <i class="ph ph-martini"></i>
+                <div class="stat-text">
+                    <strong>All-Inclusive</strong>
+                    <span>Bebidas e refeições</span>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+                <i class="ph ph-house-line"></i>
+                <div class="stat-text">
+                    <strong>Chalés Premium</strong>
+                    <span>Conforto e luxo</span>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="content-section" id="flyers">
-        <h2 class="section-title">Material Promocional (9:16)</h2>
-        <div class="flyers-grid">
-            <div class="flyer-card">
+    <!-- Flyers Section -->
+    <section class="features container" id="flyers">
+        <div class="section-header text-center">
+            <h2 class="section-title">Material Promocional (9:16)</h2>
+            <p class="section-desc">Acesse os flyers interativos da campanha. Prontos para screenshot mobile ou exportação via código.</p>
+        </div>
+        
+        <div class="feature-grid">
+            <div class="feature-card glass-card hover-lift">
+                <div class="icon-box"><i class="ph ph-image"></i></div>
                 <h3>V1 - Tropical Rústico</h3>
-                <a href="flyer_v1.html" class="btn btn-secondary">Abrir Flyer V1</a>
+                <p>Arte focada nos chalés de madeira na beira da praia com coqueiros.</p>
+                <br>
+                <a href="flyer_v1.html" class="btn btn-primary">Abrir Flyer V1</a>
             </div>
-            <div class="flyer-card">
-                <h3>V2 - Minimalista Moderno</h3>
-                <a href="flyer_v2.html" class="btn btn-secondary">Abrir Flyer V2</a>
+            <div class="feature-card glass-card hover-lift">
+                <div class="icon-box"><i class="ph ph-swimming-pool"></i></div>
+                <h3>V2 - Moderno</h3>
+                <p>Focado nas novas estruturas com piscinas modernas e minimalistas.</p>
+                <br>
+                <a href="flyer_v2.html" class="btn btn-primary">Abrir Flyer V2</a>
             </div>
-            <div class="flyer-card">
+            <div class="feature-card glass-card hover-lift">
+                <div class="icon-box"><i class="ph ph-sun-horizon"></i></div>
                 <h3>V3 - Sunset Luxury</h3>
-                <a href="flyer_v3.html" class="btn btn-secondary">Abrir Flyer V3</a>
+                <p>Um pôr do sol incrível refletindo na piscina do resort.</p>
+                <br>
+                <a href="flyer_v3.html" class="btn btn-primary">Abrir Flyer V3</a>
             </div>
         </div>
-    </main>
+    </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Lidiane Turismo. Todos os direitos reservados.</p>
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container cta-content glass-card dark-glass">
+            <div class="cta-text">
+                <h2>Precisa gerar os PNGs?</h2>
+                <p>Lembre-se que você pode usar o robô export_flyers.py para recortar essas artes em altíssima qualidade automaticamente!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="../brand/logo.png" alt="Lidiane Turismo" class="footer-logo">
+                <p>Sua agência de viagens premium. Transformando sonhos em destinos inesquecíveis.</p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Lidiane Turismo. Todos os direitos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>
