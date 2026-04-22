@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer V8 - Sunset Watermark</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #222; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .story-container { width: 1080px; height: 1920px; background-image: url('bg_flyer_v5.png'); background-size: cover; background-position: center; position: relative; transform-origin: top center; transform: scale(0.4); border-radius: 40px; overflow: hidden; }
+        .logo-watermark { position: absolute; top: 100px; left: 50%; transform: translateX(-50%); width: 900px; opacity: 0.15; filter: grayscale(100%) brightness(200%); }
+        .content { position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%); padding: 100px 80px; display: flex; flex-direction: column; justify-content: flex-end; color: white; }
+        .logo-small { width: 300px; margin-bottom: 40px; }
+        .title { font-family: 'Outfit', sans-serif; font-size: 85px; font-weight: 900; line-height: 1; text-transform: uppercase; margin-bottom: 30px; color: #FFF; text-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        .title span { color: #FF7F50; }
+        .info-bar { border-left: 8px solid #FF7F50; padding-left: 30px; margin-bottom: 40px; }
+        .info-bar p { font-size: 36px; line-height: 1.5; font-weight: 300; }
+        .info-bar strong { font-weight: 700; }
+        .price-tag { background: #FF7F50; color: white; display: inline-block; padding: 20px 40px; border-radius: 20px; font-family: 'Outfit', sans-serif; font-size: 60px; font-weight: 900; }
+        .price-tag span { font-size: 30px; font-weight: 400; font-family: 'Inter', sans-serif; }
+        @media (max-width: 1200px) { .story-container { transform: scale(0.3); } }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        
+        <div class="header" style="position: absolute; top: 80px; left: 0; width: 100%; text-align: center; z-index: 10;">
+            <img src="../brand/logo_transparent.png" alt="Logo" class="logo-small">
+        </div>
+        
+        <div class="content">
+            
+            <h1 class="title">COSTA DO<br><span>SAUÍPE</span></h1>
+            
+            <div class="info-bar">
+                <p>06 a 11 de Outubro 2026</p>
+                <p><strong>Ônibus Leito</strong> (Ida/Volta)</p>
+                <p><strong>5 Noites</strong> Resort All-Inclusive</p>
+            </div>
+
+            <div>
+                <div class="price-tag"><span>Por pessoa: </span>R$ 3.300</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

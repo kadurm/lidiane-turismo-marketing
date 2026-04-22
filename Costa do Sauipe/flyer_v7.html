@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyer V7 - Glass Elegance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #000; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+        .story-container { width: 1080px; height: 1920px; background-image: url('bg_flyer_v4.png'); background-size: cover; background-position: center; position: relative; transform-origin: top center; transform: scale(0.4); border-radius: 40px; }
+        .glass-card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 85%; height: 80%; background: rgba(0, 0, 0, 0.5); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 80px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; color: white; box-shadow: 0 30px 60px rgba(0,0,0,0.6); }
+        .logo { width: 350px; position: absolute; top: -100px; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
+        .destination { font-family: 'Outfit', sans-serif; font-size: 70px; font-weight: 900; text-transform: uppercase; letter-spacing: 5px; color: #FF7F50; margin-top: 50px; line-height: 1.1; }
+        .destination span { color: white; font-weight: 400; font-size: 40px; display: block; margin-bottom: 20px; letter-spacing: 2px; }
+        .price { font-family: 'Outfit', sans-serif; font-size: 150px; font-weight: 900; margin: 10px 0; color: white; text-shadow: 0 10px 30px rgba(255, 127, 80, 0.3); }
+        .price small { font-size: 40px; font-weight: 400; color: #aaa; vertical-align: middle; }
+        .details { background: rgba(255,255,255,0.1); padding: 40px; border-radius: 30px; width: 100%; border: 1px solid rgba(255,255,255,0.1); }
+        .details p { font-size: 38px; line-height: 1.6; font-weight: 300; }
+        .details strong { color: #FF7F50; font-weight: 600; }
+        @media (max-width: 1200px) { .story-container { transform: scale(0.3); } }
+    </style>
+</head>
+<body>
+    <div class="story-container">
+        <div class="glass-card">
+            <img src="../brand/logo_transparent.png" alt="Logo Lidiane Turismo" class="logo">
+            
+            <div class="destination">
+                <span>Destino Exclusivo</span>
+                Costa do Sauípe
+            </div>
+
+            <div class="price">
+                <small>R$</small> 3.300
+            </div>
+
+            <div class="details">
+                <p>Saída: <strong>06 de Outubro</strong> 2026</p>
+                <p>Retorno: <strong>11 de Outubro</strong> 2026</p>
+                <div style="height: 20px;"></div>
+                <p>Pacote inclui: <strong>Ônibus Leito</strong> (ida e volta)<br>+ <strong>5 noites</strong> no Resort All-inclusive</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
