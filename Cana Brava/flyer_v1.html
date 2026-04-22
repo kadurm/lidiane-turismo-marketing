@@ -2,52 +2,144 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flyer Cana Brava V1</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=1080">
+    <title>Flyer Story - Cana Brava</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <style>
-        .story-container { background-image: url('bg_cana_brava_v1.png'); }
-        .destination-badge { background: rgba(255, 255, 255, 0.9); color: #008080; }
-        .price-box { background: white; border: 2px solid #FF7F50; }
-        .price-value { color: #FF7F50; }
-        .info-card { background: rgba(0, 128, 128, 0.85); backdrop-filter: blur(10px); }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* 9:16 Aspect Ratio Container */
+        .story-container {
+            width: 1080px;
+            height: 1920px;
+            background-image: url('bg_cana_brava_v1.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        /* Dark gradient overlay to make text pop */
+        .overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(
+                to bottom,
+                rgba(0,0,0,0.4) 0%,
+                rgba(0,0,0,0.1) 40%,
+                rgba(0, 102, 102, 0.8) 100%
+            );
+            z-index: 1;
+        }
+
+        .content {
+            position: relative; z-index: 2; height: 100%;
+            display: flex; flex-direction: column; justify-content: space-between;
+            padding: 100px 80px; color: #ffffff;
+        }
+
+        .top-section { text-align: center; }
+        .logo { width: 350px; margin-bottom: 60px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.3)); border-radius: 30px; }
+
+        .destination-badge {
+            display: inline-block; background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.4); padding: 15px 40px; border-radius: 50px;
+            font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: 2px;
+            text-transform: uppercase; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .middle-section { text-align: center; margin-top: -200px; }
+
+        .price-card {
+            background: rgba(255, 255, 255, 0.95); padding: 50px 40px; border-radius: 40px;
+            color: #006666; box-shadow: 0 20px 40px rgba(0,0,0,0.3); display: inline-block;
+            border-bottom: 10px solid #FF7F50;
+        }
+
+        .price-label { font-size: 32px; font-weight: 600; color: #5D6D7E; margin-bottom: 10px; text-transform: uppercase; }
+        .price-value { font-family: 'Outfit', sans-serif; font-size: 80px; font-weight: 800; line-height: 1; margin-bottom: 10px; color: #FF7F50; }
+        .price-desc { font-size: 36px; font-weight: 700; }
+
+        .bottom-section {
+            background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(15px); border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px; padding: 60px; width: 100%;
+        }
+
+        .info-row { display: flex; align-items: center; gap: 30px; margin-bottom: 40px; }
+        .info-row:last-child { margin-bottom: 0; padding-top: 40px; border-top: 2px solid rgba(255, 255, 255, 0.2); }
+
+        .icon-box {
+            width: 90px; height: 90px; background: #FF7F50; border-radius: 25px;
+            display: flex; justify-content: center; align-items: center; font-size: 45px; flex-shrink: 0;
+        }
+
+        .info-text h3 { font-family: 'Outfit', sans-serif; font-size: 32px; color: #FFDAB9; margin-bottom: 5px; }
+        .info-text p { font-size: 42px; font-weight: 700; }
+
+        .package-includes { font-size: 34px; line-height: 1.3; font-weight: 500; }
+        .package-includes strong { color: #FF7F50; font-weight: 800; }
     </style>
 </head>
 <body>
     <div class="story-container">
-        <div class="header">
-            <div class="logo-container">
-                <img src="../brand/logo_transparent.png" alt="Lidiane Turismo">
-            </div>
-            <div class="destination-badge">CANA BRAVA - ILHÉUS/BA</div>
-        </div>
-
+        <div class="overlay"></div>
         <div class="content">
-            <div class="price-box">
-                <div class="price-label">A PARTIR DE</div>
-                <div class="price-value">R$ [PREÇO]</div>
-                <div class="price-suffix">por pessoa (pacote completo)</div>
+            <div class="top-section">
+                <img src="../brand/logo.png" alt="Lidiane Turismo Logo" class="logo">
+                <br>
+                <div class="destination-badge">Cana Brava - Ilhéus/BA</div>
             </div>
 
-            <div class="info-card">
+            <div class="middle-section">
+                <div class="price-card">
+                    <div class="price-label">Pacote completo</div>
+                    <div class="price-value">Lorem Ipsum</div>
+                    <div class="price-desc">por pessoa</div>
+                </div>
+            </div>
+
+            <div class="bottom-section">
                 <div class="info-row">
-                    <div class="icon">📅</div>
+                    <div class="icon-box"><i class="ph ph-calendar-check"></i></div>
                     <div class="info-text">
-                        <div class="info-title">Saída</div>
-                        <div class="info-desc">[DATA DE SAÍDA]</div>
+                        <h3>Saída</h3>
+                        <p>Lorem ipsum dolor</p>
                     </div>
                 </div>
+                
                 <div class="info-row">
-                    <div class="icon">📅</div>
+                    <div class="icon-box"><i class="ph ph-calendar-x"></i></div>
                     <div class="info-text">
-                        <div class="info-title">Retorno</div>
-                        <div class="info-desc">[DATA DE RETORNO]</div>
+                        <h3>Retorno</h3>
+                        <p>Sit amet consectetur</p>
                     </div>
                 </div>
-                <div class="package-includes">
-                    <div class="icon">🚌</div>
-                    <div class="include-text">Pacote inclui: [TIPO DE TRANSPORTE]<br>+ Hospedagem no Resort All-inclusive</div>
+
+                <div class="info-row">
+                    <div class="icon-box" style="background: transparent; border: 3px solid #FF7F50; font-size: 55px; color: #FF7F50;">
+                        <i class="ph ph-star"></i>
+                    </div>
+                    <div class="info-text package-includes">
+                        Pacote inclui: <strong>Lorem Ipsum</strong><br>
+                        + <strong>All-inclusive</strong> Resort
+                    </div>
                 </div>
             </div>
         </div>
